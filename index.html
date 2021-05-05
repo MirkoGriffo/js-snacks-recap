@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snack</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="contatti" >
+        
+        <ul
+        v-for="(contatto, index) in contatti"
+        >
+            <li :class="[contatto.attivo === true ? 'attivo' : 'nonAttivo']"> {{ contatto.nome }} {{ contatto.cognome }} <span @click="cliccaNumero(index)">{{contatto.numero}}</span></li>
+        </ul>
+    </div>
+</div> 
+
+</div> 
+    </div>
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
