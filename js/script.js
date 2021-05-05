@@ -67,6 +67,98 @@ giocatori.forEach((giocatore) => {
     console.log(`Codice giocatore:${giocatore.codiceGiocatore} | Media punti: ${giocatore.mediaPunti}`);
 });
 
+
+
+
+
+/*
+Crea un array composto da 10 automobili. 
+Ogni oggetto automobile avrà le seguenti proprietà: marca, modello, alimentazione (benzina, diesel, gpl, elettrico, metano).
+- Dividi in 3 array separati. Inserire nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo e ultimo il resto delle auto. 
+- Infine stampa separatamente i 3 array.
+*/
+
+const auto = [
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Opel",
+        modello: "B",
+        alimentazione: "diesel"
+    },
+
+    {
+        marca: "Toyota",
+        modello: "C",
+        alimentazione: "elettrico"
+    },
+
+    {
+        marca: "Renault",
+        modello: "D",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Fiat",
+        modello: "E",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "benzina"
+    },
+
+    {
+        marca: "Ferrari",
+        modello: "A",
+        alimentazione: "GPL"
+    },
+
+],
+
+
+
+    autoBenzina = auto.filter(automobile => {
+        return automobile.alimentazione === "benzina";
+    });
+
+autoDiesel = auto.filter(automobile => {
+    return automobile.alimentazione === "diesel";
+});
+
+altraAlimentazione = auto.filter(automobile => {
+    return automobile.alimentazione !== "benzina" && automobile.alimentazione !== "diesel";
+});
+
+console.log(autoBenzina);
+console.log(autoDiesel);
+console.log(altraAlimentazione);
+
 /*
 // Crea un array di 8 oggetti che rappresentano delle persone: ogni persona ha un nome, un cognome e un'età.
 // Crea un nuovo array inserendo per ogni persona 
